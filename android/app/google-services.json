@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "179895405154",
+    "project_id": "cookpad-authentication",
+    "storage_bucket": "cookpad-authentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179895405154:android:1fabe9382ee1ef01605f3b",
+        "android_client_info": {
+          "package_name": "com.example.cookpad_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIChZE_8vsAKpfAqlbuR22cx08J2TD7tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

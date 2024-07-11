@@ -3,8 +3,8 @@ import 'package:cookpad_application/provider/categories_data.dart';
 import 'package:cookpad_application/screens/category_screen.dart';
 import 'package:flutter/material.dart';
 
-class CategorieBox extends StatelessWidget {
-  const CategorieBox({
+class IngredientsItem extends StatelessWidget {
+  const IngredientsItem({
     Key? key,
     required this.BoxTitle,
     required this.onPressed,
@@ -75,8 +75,6 @@ class CategorieBox extends StatelessWidget {
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    // mainAxisSpacing: 5,
-                    // crossAxisSpacing: 5,
                     childAspectRatio: 2.5,
                   ),
                   itemCount: snapshot.hasData ? snapshot.data!.length : 0,

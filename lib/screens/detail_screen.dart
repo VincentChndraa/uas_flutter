@@ -224,22 +224,6 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Section 5 - User Information (belum lengkap)
-                  Container(
-                    height: 250,
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CircleAvatar(),
-                        Text(
-                          "Diterbitkan oleh: [Nama Pengguna]",
-                          // gantilah [Nama Pengguna] dengan nama pengguna yang tepat
-                        ),
-                        // tambahkan informasi lainnya yang dibutuhkan
-                      ],
-                    ),
-                  ),
                 ],
               ),
             );

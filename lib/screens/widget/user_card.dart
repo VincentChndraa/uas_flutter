@@ -43,14 +43,14 @@ class _UsersCardState extends State<UsersCard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "widget.listuser.name",
+                          "Nama Pengguna",
                           style: TextStyle(
                             fontWeight: FontWeight.w900,
                             fontSize: 11,
                           ),
                         ),
                         Text(
-                          "widget.listuser.username",
+                          "Username",
                           style: TextStyle(fontSize: 10),
                         ),
                         SizedBox(height: 3),

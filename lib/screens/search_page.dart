@@ -33,7 +33,7 @@ class _SearchPageState extends State<SearchPage> {
       body: ListView(
         shrinkWrap: true,
         physics: BouncingScrollPhysics(),
-        children: [CategorieBox(BoxTitle: "", onPressed: () {})],
+        children: [IngredientsItem(BoxTitle: "Ingredients", onPressed: () {})],
       ),
     );
   }

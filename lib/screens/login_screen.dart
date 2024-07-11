@@ -21,13 +21,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  // Future signIn() async {
-  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
-  //     email: _emailController.text.trim(),
-  //     password: _passwordController.text.trim(),
-  //   );
-  // }
-
   Future signUserIn() async {
     // loading circle
     showDialog(
@@ -56,7 +49,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -68,13 +60,6 @@ class _LoginScreenState extends State<LoginScreen> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Email tidak terdaftar'),
-          content: Text('Mohon periksa kembali email dan password Anda.'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text('Tutup'),
-            ),
-          ],
         );
       },
     );

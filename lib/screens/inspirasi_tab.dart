@@ -1,11 +1,9 @@
 import 'package:cookpad_application/models/recipe_model.dart';
 import 'package:cookpad_application/provider/ingredients_data.dart';
 import 'package:cookpad_application/provider/recipe_provider.dart';
-import 'package:cookpad_application/screens/see_all_recipe.dart';
 import 'package:cookpad_application/screens/widget/card_title.dart';
 import 'package:cookpad_application/screens/widget/ingredients_item.dart';
 import 'package:cookpad_application/screens/widget/recipe_card.dart';
-import 'package:cookpad_application/screens/widget/recipesbox.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -50,20 +48,14 @@ class _RecipeScreenState extends State<InspirasiTab> {
                   ),
                 ),
 
-                CategorieBox(
+                IngredientsItem(
                   BoxTitle: 'Ingredients',
                   onPressed: () {},
                 ),
 
                 BoxTitle(
                   title: "Popular Meals",
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SeeAllMeals(
-                                ScreenTitle: "Popular Meals", firstChar: "s")));
-                  },
+                  onPressed: () {},
                   isLoading: false,
                 ),
 
@@ -73,16 +65,7 @@ class _RecipeScreenState extends State<InspirasiTab> {
                 ),
 
                 BoxTitle(
-                    title: "Top Search",
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SeeAllMeals(
-                                  ScreenTitle: "Popular Meals",
-                                  firstChar: "h")));
-                    },
-                    isLoading: false),
+                    title: "Top Search", onPressed: () {}, isLoading: false),
 
                 RecipeCard(
                   firstChar: "h",

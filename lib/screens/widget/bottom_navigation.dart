@@ -1,5 +1,6 @@
 import 'package:cookpad_application/screens/favorite_page.dart';
 import 'package:cookpad_application/screens/home_screen.dart';
+import 'package:cookpad_application/screens/profile_page.dart';
 import 'package:cookpad_application/screens/search_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +78,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       case 3:
         return Center(child: Text('Premium'));
       case 4:
-        return FavoriteScreen();
+        return ProfileScreen();
       default:
         return Container();
     }

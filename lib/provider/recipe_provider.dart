@@ -5,11 +5,6 @@ import 'dart:convert';
 
 class RecipeProvider with ChangeNotifier {
   List<MealModel> _favoriteResep = [];
-  List<MealModel> _recipess = [];
-
-  List<MealModel> get recipess {
-    return [..._recipess];
-  }
 
   bool _isLoading = false;
   MealModel _recipes = MealModel();
@@ -46,44 +41,4 @@ class RecipeProvider with ChangeNotifier {
     _favoriteResep = [];
     notifyListeners();
   }
-
-  Future<void> fetchAllRecipes() async {
-    _isLoading = true;
-    notifyListeners();
-
-    final response = await http.get(Uri.parse(
-        'https://www.themealdb.com/api/json/v1/1/search.php?s=')); // Ganti dengan URL API yang sesuai
-
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
-      if (data['meals'] != null) {
-        final _allRecipes = (data['meals'] as List)
-            .map((meal) => MealModel.fromJson(meal))
-            .toList();
-      }
-    } else {
-      throw Exception('Failed to load recipes');
-    }
-
-    _isLoading = false;
-    notifyListeners();
-  }
-
-  // void removeFavorite(int index) {
-  //   if (index >= 0 && index < _favoriteResep.length) {
-  //     _favoriteResep.removeAt(index);
-  //     notifyListeners();
-  //   }
-  // }
-
-  // void removeFavorite(MealModel meal) {
-  //   if (favoriteResep.contains(meal)) {
-  //     favoriteResep.remove(meal);
-  //     notifyListeners();
-  //   }
-  // }
-
-  // bool isFavorite(MealModel meal) {
-  //   return favoriteResep.contains(meal);
-  // }
 }

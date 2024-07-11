@@ -13,16 +13,16 @@ class FavoriteScreen extends StatelessWidget {
     final meals = favoritesProvider.favoriteResep;
 
     return Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Color(0xFFF8F6F2),
-        //   title: Text(
-        //     "Tersimpan",
-        //     style: TextStyle(
-        //       fontSize: 14,
-        //       fontWeight: FontWeight.bold,
-        //     ),
-        //   ),
-        // ),
+        appBar: AppBar(
+          backgroundColor: Color(0xFFF8F6F2),
+          title: Text(
+            "Tersimpan",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         backgroundColor: Color(0xFFF8F6F2),
         body: favoritesProvider.favoriteResep.isEmpty
             ? const Center(
@@ -51,7 +51,10 @@ class FavoriteScreen extends StatelessWidget {
               ))
             : ListView(
                 padding: const EdgeInsets.all(16.0),
-                children: [RecipeCard(firstChar: "S", resep: MealModel())],
+                children: [
+                  Text("Tersimpan"),
+                  RecipeCard(firstChar: "S", resep: MealModel()),
+                ],
               ));
   }
 }
